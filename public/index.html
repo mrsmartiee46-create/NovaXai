@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090710">
+
+<title>NovaX AI — Your AI Workspace</title>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">✦ NovaX <span>AI</span></div>
+
+    <button class="new-chat" onclick="openTool('chat')">
+      + New Chat
+    </button>
+
+    <p class="menu-title">WORKSPACE</p>
+
+    <button class="nav active" data-tool="home">⌂ Dashboard</button>
+    <button class="nav" data-tool="chat">✧ AI Chat</button>
+    <button class="nav" data-tool="image">▧ Image Studio</button>
+    <button class="nav" data-tool="writer">✎ AI Writer</button>
+    <button class="nav" data-tool="code">⌘ Code Assistant</button>
+    <button class="nav" data-tool="translate">文 Translator</button>
+    <button class="nav" data-tool="study">▤ Study Assistant</button>
+
+    <div class="profile">
+      <div class="avatar">N</div>
+      <div>
+        <b>NovaX User</b>
+        <small>Free Workspace</small>
+      </div>
+    </div>
+
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <div class="top-brand">✦ NovaX AI</div>
+
+      <span class="status">● ONLINE</span>
+
+    </header>
+
+    <section class="content" id="content">
+
+      <div class="welcome">
+
+        <span class="eyebrow">YOUR AI WORKSPACE</span>
+
+        <h1>
+          Imagine it.<br>
+          <span>Create it.</span>
+        </h1>
+
+        <p>
+          Your intelligent workspace for creativity,
+          productivity and learning.
+        </p>
+
+      </div>
+
+      <div class="search-box">
+
+        <input
+          id="mainPrompt"
+          placeholder="Ask NovaX anything..."
+          onkeydown="if(event.key==='Enter') sendMainPrompt()"
+        >
+
+        <button onclick="sendMainPrompt()">➤</button>
+
+      </div>
+
+      <h2 class="section-title">Explore AI Tools</h2>
+
+      <div class="tools-grid">
+
+        <div class="tool-card purple" onclick="openTool('chat')">
+          <div class="tool-icon">✧</div>
+          <h3>AI Chat</h3>
+          <p>Chat and explore ideas.</p>
+          <span>Open tool →</span>
+        </div>
+
+        <div class="tool-card blue" onclick="openTool('image')">
+          <div class="tool-icon">▧</div>
+          <h3>Image Studio</h3>
+          <p>Create images from prompts.</p>
+          <span>Open tool →</span>
+        </div>
+
+        <div class="tool-card pink" onclick="openTool('writer')">
+          <div class="tool-icon">✎</div>
+          <h3>AI Writer</h3>
+          <p>Write creative content.</p>
+          <span>Open tool →</span>
+        </div>
+
+        <div class="tool-card green" onclick="openTool('code')">
+          <div class="tool-icon">⌘</div>
+          <h3>Code Assistant</h3>
+          <p>Generate and understand code.</p>
+          <span>Open tool →</span>
+        </div>
+
+        <div class="tool-card orange" onclick="openTool('translate')">
+          <div class="tool-icon">文</div>
+          <h3>Translator</h3>
+          <p>Translate languages.</p>
+          <span>Open tool →</span>
+        </div>
+
+        <div class="tool-card cyan" onclick="openTool('study')">
+          <div class="tool-icon">▤</div>
+          <h3>Study Assistant</h3>
+          <p>Learn difficult topics.</p>
+          <span>Open tool →</span>
+        </div>
+
+      </div>
+
+      <div class="bottom-note">
+        <h3>✦ Powered by possibilities</h3>
+        <p>One workspace. Multiple creative tools.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

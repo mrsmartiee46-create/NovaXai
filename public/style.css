@@ -1,0 +1,421 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #090710;
+  --panel: #12101d;
+  --card: #171426;
+  --line: #302741;
+  --purple: #a47aff;
+  --muted: #aaa1bb;
+}
+
+body {
+  background: var(--bg);
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 245px;
+  background: #100e19;
+  border-right: 1px solid var(--line);
+  padding: 24px 17px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.brand span {
+  color: var(--purple);
+}
+
+.new-chat {
+  padding: 13px;
+  border: 1px solid #7354b6;
+  border-radius: 10px;
+  color: white;
+  background: #251b3a;
+  margin-bottom: 30px;
+}
+
+.menu-title {
+  font-size: 11px;
+  color: #80758f;
+  margin-bottom: 13px;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  text-align: left;
+  padding: 13px;
+  border-radius: 9px;
+  margin-bottom: 5px;
+}
+
+.nav:hover,
+.nav.active {
+  background: #251d37;
+  color: #c3a5ff;
+}
+
+.profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 5px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  background: #7950b7;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.profile small {
+  display: block;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+/* MAIN */
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 68px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  background: #0e0c17;
+}
+
+.top-brand {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.status {
+  color: #65dca1;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 23px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 30px;
+}
+
+/* HERO */
+
+.welcome {
+  padding: 15px 0 25px;
+}
+
+.eyebrow {
+  color: var(--purple);
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.welcome h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.welcome h1 span {
+  color: var(--purple);
+}
+
+.welcome p {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 550px;
+}
+
+/* SEARCH */
+
+.search-box {
+  display: flex;
+  padding: 9px;
+  background: var(--panel);
+  border: 1px solid #483566;
+  border-radius: 14px;
+  margin: 20px 0 45px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.search-box button {
+  background: #895ce4;
+  color: white;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+/* TOOL CARDS */
+
+.section-title {
+  margin-bottom: 22px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tool-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 23px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  border-color: #9164d5;
+}
+
+.tool-icon {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.tool-card h3 {
+  margin-bottom: 9px;
+}
+
+.tool-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tool-card span {
+  font-size: 12px;
+  color: var(--purple);
+}
+
+.purple .tool-icon { color: #ae87ff; }
+.blue .tool-icon { color: #69a9ff; }
+.pink .tool-icon { color: #ff8dc9; }
+.green .tool-icon { color: #72e6b0; }
+.orange .tool-icon { color: #ffb66f; }
+.cyan .tool-icon { color: #69dcf0; }
+
+/* FOOTER CARD */
+
+.bottom-note {
+  margin-top: 35px;
+  background: linear-gradient(120deg,#24153c,#141326);
+  border: 1px solid #42305e;
+  padding: 24px;
+  border-radius: 15px;
+}
+
+.bottom-note h3 {
+  margin-bottom: 9px;
+  color: #c4a4ff;
+}
+
+.bottom-note p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* TOOL PAGES */
+
+.workspace {
+  background: var(--panel);
+  border: 1px solid #342a48;
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 25px;
+}
+
+.workspace label {
+  display: block;
+  color: #c9b7e8;
+  margin-bottom: 12px;
+}
+
+.workspace textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  background: #090710;
+  border: 1px solid #39304c;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  font: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.action {
+  background: #895ce4;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  padding: 13px 18px;
+  margin-top: 15px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.message {
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.bot {
+  background: #241b36;
+  color: #e0d3f5;
+}
+
+.user {
+  background: #493074;
+  margin-left: 20px;
+}
+
+.output {
+  margin-top: 20px;
+  white-space: pre-wrap;
+  color: #ddd0f3;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.back {
+  background: #201a30;
+  color: #c6a8ff;
+  border: 1px solid #44345f;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* MOBILE DESIGN */
+
+@media(max-width:850px) {
+  .sidebar {
+    position: fixed;
+    z-index: 10;
+    left: -260px;
+    top: 0;
+    bottom: 0;
+    transition: .3s;
+    overflow-y: auto;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    padding: 35px 20px;
+  }
+}
+
+@media(max-width:420px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome h1 {
+    font-size: 43px;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+}
+
